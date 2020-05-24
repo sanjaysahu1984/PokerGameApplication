@@ -39,7 +39,7 @@ namespace PokerGame.ConsoleApp
 
                 char cardType = cardValue[cardValue.Length - 1];
                 CardInHand[i]=new Card(cardNumber, cardType);
-                i++;
+                i++;   
             }
         }
 
