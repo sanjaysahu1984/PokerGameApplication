@@ -56,9 +56,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\PokerGame.ConsoleApp\PokerGame.ConsoleApp.csproj">
-      <Project>{20da6111-6df9-4ff6-8924-ca8328074150}</Project>
-      <Name>PokerGame.ConsoleApp</Name>
+    <ProjectReference Include="..\PockerLibrary\PockerLibrary.csproj">
+      <Project>{864ec5c1-56ca-4899-99d5-985c31fd5c75}</Project>
+      <Name>PockerLibrary</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />

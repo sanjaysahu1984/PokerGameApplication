@@ -4,17 +4,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{20DA6111-6DF9-4FF6-8924-CA8328074150}</ProjectGuid>
-    <OutputType>Exe</OutputType>
-    <RootNamespace>PokerGame.ConsoleApp</RootNamespace>
-    <AssemblyName>PokerGame.ConsoleApp</AssemblyName>
+    <ProjectGuid>{864EC5C1-56CA-4899-99D5-985C31FD5C75}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PockerLibrary</RootNamespace>
+    <AssemblyName>PockerLibrary</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -24,7 +23,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -43,17 +41,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="Card\Card.cs" />
+    <Compile Include="Card\CardNumber.cs" />
+    <Compile Include="Card\CardType.cs" />
+    <Compile Include="Card\ICard.cs" />
+    <Compile Include="PockerHand\Flush.cs" />
+    <Compile Include="PockerHand\FourOfAKind.cs" />
+    <Compile Include="PockerHand\FullHouse.cs" />
+    <Compile Include="Hand.cs" />
+    <Compile Include="PockerHand\ICheckPockerHand.cs" />
+    <Compile Include="IHand.cs" />
+    <Compile Include="PockerHand\OnePair.cs" />
+    <Compile Include="PockerHand\RoyalFlush.cs" />
+    <Compile Include="PockerHand\Straight.cs" />
+    <Compile Include="PockerHand\StraightFlush.cs" />
+    <Compile Include="PockerHand\ThreeOfAKind.cs" />
+    <Compile Include="PockerHand\TwoPair.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\PockerLibrary\PockerLibrary.csproj">
-      <Project>{864ec5c1-56ca-4899-99d5-985c31fd5c75}</Project>
-      <Name>PockerLibrary</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

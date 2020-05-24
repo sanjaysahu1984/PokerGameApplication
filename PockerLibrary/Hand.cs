@@ -20,7 +20,7 @@ namespace PokerGame.ConsoleApp
         {
             CardInHand = new Card[5];
 
-            var cardArr=cards.Split(',');
+            var cardArr=cards.ToUpper().Split(',');
             
             if (cardArr.Length != 5)
                 throw new Exception("Please enter five cards!");
@@ -33,7 +33,7 @@ namespace PokerGame.ConsoleApp
             {
                 string cardValue = c.Trim();
                 if (cardValue.Length < 2 && cardValue.Length>3)
-                    throw new Exception("Please Enter valid Card!");
+                    throw new Exception("Please Enter valid Card Number!");
 
               string cardNumber = cardValue.Substring(0, cardValue.Length - 1);
 
